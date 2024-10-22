@@ -85,10 +85,11 @@ module "cidaas_consent_module" {
 ## Inputs
 
 | Name | Description | Type | Required |
-|------|-------------|------|:--------:|
+|------|-------------|------|----------|
 | group_name | Name of the consent group | `string` | yes |
-| description | Description for the consent group | `string` | yes |
+| description | Description for the consent group | `string` | No |
 | consents | List of consents each containing multiple consent versions and locales | `list(object)` | yes |
+| enabled | Flag to enable or disable a consent. Defualt value is `true`. | `bool` | No |
 
 For detailed information about the `consents` variable structure, please refer to the `variables.tf` file.
 
