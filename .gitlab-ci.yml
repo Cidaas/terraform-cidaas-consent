@@ -1,5 +1,7 @@
 sync-with-github:
+  image: ubuntu:20.04
   before_script:
+    - apt-get update && apt-get install -y git
     - git config --global user.name "${GITLAB_USER_NAME}"
     - git config --global user.email "${GITLAB_USER_EMAIL}"
   script:
